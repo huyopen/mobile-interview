@@ -132,8 +132,8 @@ export const MomentCardWrapper = memo(({
     });
   }, [scrollX, inputRange, cardWidth, isLargeScreen, prefersReducedMotion]);
 
-  const showActiveStyle = isActive || isPreview || isHovered;
-  const shouldBlur = isLargeScreen && !isActive && !isPreview && !isHovered;
+  const showActiveStyle = isActive || isPreview;
+  const shouldBlur = isLargeScreen && !isActive && !isPreview;
 
   // Handle card press with proper event handling
   const handleCardPress = useCallback((e: any) => {
