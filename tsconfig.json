@@ -1,6 +1,18 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
-  }
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@services/*": ["src/services/*"],
+      "@utils/*": ["src/utils/*"],
+      "@src/types/*": ["src/types/*"],
+      "@constants/*": ["src/constants/*"],
+      "@hooks/*" : ["src/hooks/*"],
+      "@screens/*" : ["src/screens/*"]
+
+    }
+  },
+  "exclude": ["video.ts"]
 }
